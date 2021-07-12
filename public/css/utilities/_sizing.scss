@@ -1,0 +1,43 @@
+// Width
+.w-25 { width: 25%; }
+.w-50 { width: 50%; }
+.w-75 { width: 75%; }
+.w-100 { width: 100%; }
+.w-auto { width: auto; }
+.mw-100 {max-width: 100%; }
+.vw-100 { width: 100vw;}
+.min-vw-100 { min-width: 100vw; }
+
+// Height
+.h-25 { height: 25%; }
+.h-50 { height: 50%; }
+.h-75 { height: 75%; }
+.h-100 { height: 100%; }
+.h-auto { height: auto; }
+.mh-100 { max-height: 100%; }
+.vh-100 { height: 100vh; }
+.min-vh-100 { min-height: 100vh; }
+
+@each $name, $breakpoint in $media-queries {
+  @media screen and (min-width: $breakpoint) {
+    // Width
+    .w-#{$name}-25 { width: 25%; }
+    .w-#{$name}-50 { width: 50%; }
+    .w-#{$name}-75 { width: 75%; }
+    .w-#{$name}-100 { width: 100%; }
+    .w-#{$name}-auto { width: auto; }
+    .mw-#{$name}-100 {max-width: 100%; }
+    .vw-#{$name}-100 { width: 100vw;}
+    .min-#{$name}-vw-100 { min-width: 100vw; }
+
+    // Height
+    .h-#{$name}-25 { height: 25%; }
+    .h-#{$name}-50 { height: 50%; }
+    .h-#{$name}-75 { height: 75%; }
+    .h-#{$name}-100 { height: 100%; }
+    .h-#{$name}-auto { height: auto; }
+    .mh-#{$name}-100 { max-height: 100%; }
+    .vh-#{$name}-100 { height: 100vh; }
+    .min-#{$name}-vh-100 { min-height: 100vh; }
+  }
+}

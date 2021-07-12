@@ -1,0 +1,23 @@
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+.overflow-scroll { overflow: scroll; }
+.overflow-wrap { overflow-wrap: anywhere; }
+.overflow-x { overflow-x: auto; }
+.overflow-y { overflow-y: auto; }
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-y-hidden { overflow-y: hidden; }
+
+@each $name, $breakpoint in $media-queries {
+  @media screen and (min-width: $breakpoint) {
+    .overflow-#{$name}-auto { overflow: auto; }
+    .overflow-#{$name}-hidden { overflow: hidden; }
+    .overflow-#{$name}-visible { overflow: visible; }
+    .overflow-#{$name}-scroll { overflow: scroll; }
+    .overflow-#{$name}-wrap { overflow-wrap: anywhere; }
+    .overflow-#{$name}-x { overflow-x: auto; }
+    .overflow-#{$name}-y { overflow-y: auto; }
+    .overflow-#{$name}-x-hidden { overflow-x: hidden; }
+    .overflow-#{$name}-y-hidden { overflow-y: hidden; }
+  }
+}

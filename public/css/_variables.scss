@@ -1,0 +1,61 @@
+$primary : #0D6EFD;
+$primary-light : #3485ff;
+$primary-dark : #0b5ed7;
+$secondary : #6C757D;
+$secondary-light : #79838b;
+$secondary-dark : #5C636A;
+$success : #198754;
+$success-dark : #157347;
+$warning : #FFC107;
+$warning-dark : #FFCA2C;
+$danger : #DC3545;
+$danger-dark : #BB2D3B;
+$info : #0DCAF0;
+$info-dark : #31D2F2;
+$dark : #212529;
+$dark-dark : #1c1f23;
+$light : #F8F9FA;
+$light-dark : #F9FAFB;
+$white : #FFF;
+$gray-light : #CCC;
+$gray : #AAA;
+$gray-dark : #777;
+$color-text: #333333;
+$color-background: #F7F6FF;
+$color-disabled: #E9ECEF;
+
+$border-radius: 0.25rem;
+$border-color: $gray;
+$border-color-dark: $gray-dark;
+
+$spacer: 1rem;
+
+$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+$input-padding-x: 0.75rem;
+$input-padding-y: 0.375rem;
+$form-select-indicator-color: $gray-dark !default;
+$form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !default;
+
+$menu-width-open: 200px;
+$menu-width-collapsed: 64px;
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$media-queries: ("sm": $breakpoint-sm, "md": $breakpoint-md, "lg": $breakpoint-lg, "xl": $breakpoint-xl, "xxl": $breakpoint-xxl);
+
+$theme-colors: (
+  "primary" $primary $primary-dark $white,
+  "secondary" $secondary $secondary-dark $white,
+  "success" $success $success-dark $white,
+  "info" $info $info-dark $color-text,
+  "warning" $warning $warning-dark $color-text,
+  "danger" $danger $danger-dark $white,
+  "light" $light $light-dark $color-text,
+  "dark" $dark $dark-dark $white
+) !default;

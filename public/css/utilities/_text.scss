@@ -1,0 +1,58 @@
+.text-color { color: $color-text }
+.text-primary { color: $primary }
+.text-secondary { color: $secondary }
+.text-success { color: $success }
+.text-warning { color: $warning }
+.text-danger { color: $danger }
+.text-info { color: $info }
+.text-dark { color: $dark }
+.text-light { color: $light }
+.text-white { color: $white }
+.text-gray { color: $gray }
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+.text-decoration-none { text-decoration: none; }
+.text-decoration-underline { text-decoration: underline; }
+.text-decoration-line-through { text-decoration: line-through; }
+
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+.text-wrap { white-space: normal; }
+.text-nowrap { white-space: nowrap; }
+
+.text-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.fs-1 { font-size: calc(1.375rem + 1.5vw); }
+.fs-2 { font-size: calc(1.325rem + 0.9vw); }
+.fs-3 { font-size: calc(1.3rem + 0.6vw); }
+.fs-4 { font-size: calc(1.275rem + 0.3vw); }
+.fs-5 { font-size: 1.25rem; }
+.fs-6 { font-size: 1rem; }
+
+.fst-italic { font-style: italic; }
+.fst-normal { font-style: normal; }
+
+.fw-light { font-weight: 300; }
+.fw-lighter { font-weight: lighter; }
+.fw-normal { font-weight: 400; }
+.fw-bold { font-weight: 700; }
+.fw-bolder { font-weight: bolder; }
+
+@each $name, $breakpoint in $media-queries {
+  @media screen and (min-width: $breakpoint) {
+    .text-#{$name}-left { text-align: left; }
+    .text-#{$name}-right { text-align: right; }
+    .text-#{$name}-center { text-align: center; }
+    @if $name == "xl" {
+      .fs-1 { font-size: 2.5rem; }
+      .fs-2 { font-size: 2rem; }
+      .fs-3 { font-size: 1.75rem; }
+      .fs-4 { font-size: 1.5rem; }
+    }
+  }
+}

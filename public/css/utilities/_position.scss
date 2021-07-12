@@ -1,0 +1,11 @@
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+
+@each $name, $breakpoint in $media-queries {
+  @media screen and (min-width: $breakpoint) {
+    .position-#{$name}-relative { position: relative; }
+    .position-#{$name}-absolute { position: absolute; }
+    .position-#{$name}-fixed { position: fixed; }
+  }
+}

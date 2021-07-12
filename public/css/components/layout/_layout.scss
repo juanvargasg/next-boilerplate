@@ -1,0 +1,12 @@
+@import 'mixins';
+
+.app {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 45px 1fr;
+  grid-template-columns: auto 1fr;
+}
+
+@import 'header';
+@import 'aside';
+@import 'main';

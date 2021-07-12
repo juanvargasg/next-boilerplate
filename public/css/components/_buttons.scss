@@ -1,0 +1,55 @@
+.btn {
+  display: inline-block;
+  font-weight: normal;
+  color: $color-text;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: $input-padding-y $input-padding-x;
+  font-size: 1rem;
+  border-radius: $border-radius;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+}
+
+@each $color, $value, $value-dark, $font-color in $theme-colors {
+  .btn-#{$color} {
+    color: $font-color;
+    background-color: $value;
+    border-color: $value;
+    &:hover {
+      background-color: $value-dark;
+      border-color: $value-dark;
+    }
+  }
+}
+
+.btn-link {
+  color: $primary;
+  text-decoration: underline;
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+@each $color, $value, $value-dark, $font-color in $theme-colors {
+  .btn-outline-#{$color} {
+    color: $value;
+    border-color: $value;
+    &:hover {
+      background-color: $value;
+      border-color: $value;
+      color: $font-color;
+    }
+  }
+}

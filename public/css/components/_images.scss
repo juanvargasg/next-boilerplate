@@ -1,0 +1,16 @@
+@mixin img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive {
+  @include img-responsive();
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  @include img-responsive();
+}

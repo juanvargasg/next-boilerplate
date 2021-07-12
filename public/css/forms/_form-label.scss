@@ -1,0 +1,22 @@
+label {
+  display: block;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  color: $color-text;
+}
+
+.help-text {
+  color: $gray;
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.invalid-feedback {
+  color: $danger;
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+}
